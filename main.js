@@ -1,7 +1,7 @@
 let responseData;
 
 let myRequest = new Request(
-  "https://f0abcdd5.ngrok.io/stats?download=true&data=true"
+  "https://twitter-downloader-backend-gqnrmsdetg.now.sh/stats?download=true&data=true"
 );
 
 const myInit = {
