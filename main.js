@@ -1,8 +1,6 @@
 let responseData;
 
-let myRequest = new Request(
-  "https://twitter-downloader-backend-gffjqeeyec.now.sh/stats?download=true&data=true"
-);
+let myRequest = new Request("https://tvd.now.sh/stats?download=true&data=true");
 
 const myInit = {
   method: "GET",
