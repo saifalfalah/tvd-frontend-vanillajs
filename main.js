@@ -1,6 +1,8 @@
 let responseData;
 
-let myRequest = new Request("https://tvd.now.sh/stats?download=true&data=true");
+let myRequest = new Request(
+  "https://twitter-downloader-backend-gffjqeeyec.now.sh/stats?download=true&data=true"
+);
 
 const myInit = {
   method: "GET",
@@ -17,12 +19,30 @@ function append(parent, el) {
 
 const responseDiv = document.getElementById("resolveData");
 const downloadDiv = document.getElementById("downloadData");
+const dateTime = document.getElementById("dateTime");
+
+let p = createNode("p");
+
+p.innerHTML = `⏰ The time is: ${new Date().toISOString()}`;
+
+append(dateTime, p);
 
 fetch(myRequest, myInit)
   .then(response => response.json())
   .then(data => {
     responseData = data;
     console.log(data);
+
+    let p = createNode("p");
+    p.innerHTML = `💻 Server timestamp: ${responseData.timestamp}`;
+    append(dateTime, p);
+
+    let p2 = createNode("p");
+    p2.innerHTML = `🥗 Serving stats from: ${responseData.todayStart} to ${
+      responseData.todayEnd
+    }`;
+    append(dateTime, p2);
+
     let ul = createNode("ul");
     let li1 = createNode("li");
     li1.appendChild(
@@ -119,5 +139,6 @@ fetch(myRequest, myInit)
     loading.parentNode.removeChild(loading);
   })
   .catch(error => {
+    console.log(error);
     console.log(`An error occurred: ${error}`);
   });
