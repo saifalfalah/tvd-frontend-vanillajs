@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  line-height: 1.6em;
+}
+
+#main-header {
+  background: purple;
+  color: #f1f1f1;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* .stats {
+  display: none;
+} */
+
+.loading,
+.error {
+  display: none;
+}
