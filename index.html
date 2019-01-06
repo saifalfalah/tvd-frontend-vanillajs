@@ -1,26 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>TVD Stats</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="main">
-      <div><h2>🙌 Welcome to 🐦 TVD Stats 📜</h2></div>
-      <div id="dateTime"></div>
-      <div><h3>Here are your stats: 🔥</h3></div>
-      <h4 id="loading">🤞🏻🤞🏻🤞🏻 Loading your Stats!!! 🤞🏻🤞🏻🤞🏻</h4>
-      <p>/resolve endpoint</p>
-      <div id="resolveData"></div>
-      <p>〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</p>
-      <p>/download endpoint</p>
-      <div id="downloadData"></div>
-      <p>〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</p>
-      <p>Thank you for using TVD Stats. Goodbye! 👋</p>
+    <header id="main-header">
+      <div class="container"><h1>🙌 Welcome to 🐦 TVD 📜 Stats</h1></div>
+    </header>
+
+    <div class="infoHeader">
+      <div class="container"><h2>ℹ Information</h2></div>
     </div>
-    <script src="main.js"></script>
+
+    <div class="infoBox">
+      <div class="container">
+        <!-- <div class="box"><p>⏰ The time is: 2019-01-05T20:29:18.399Z</p></div>
+        <div class="box"><p>💻 Server timestamp: Jan 5, 2019 8:29 PM</p></div>
+        <div class="box">
+          <p>
+            🥗 Serving stats from: Jan 4, 2019 12:00 AM to Jan 4, 2019 11:59 PM
+          </p>
+        </div> -->
+        <div id="dateTime"></div>
+      </div>
+    </div>
+
+    <div class="errorHeader">
+      <div class="container"><h2>🔴 An Error Occurred!</h2></div>
+    </div>
+
+    <div class="errorBox">
+      <div class="container"><div id="errorText"></div></div>
+    </div>
+
+    <div class="statsHeader">
+      <div class="container"><h2>🔥 Here are your 📜 Stats:</h2></div>
+    </div>
+
+    <div class="statsBox">
+      <div class="container">
+        <div id="resolveData"></div>
+        <div id="downloadData"></div>
+      </div>
+    </div>
+
+    <div class="loadingHeader">
+      <div class="container"><h2>🤞🏻🤞🏻🤞🏻 Loading your Stats!!! 🤞🏻🤞🏻🤞🏻</h2></div>
+    </div>
+
+    <div class="goodbye">
+      <div class="container">
+        <p>Thank you for using TVD Stats. Goodbye! 👋</p>
+      </div>
+    </div>
+    <script src="./main.js"></script>
   </body>
 </html>
