@@ -7,6 +7,12 @@ body {
 #main-header {
   background: purple;
   color: #f1f1f1;
+  text-align: center;
+}
+
+h1,
+h2 {
+  line-height: 1.6em;
 }
 
 .container {
@@ -15,11 +21,27 @@ body {
   overflow: hidden;
 }
 
-/* .stats {
-  display: none;
-} */
+.goodbye {
+  background: purple;
+  color: #f1f1f1;
+  text-align: center;
+}
 
-.loading,
-.error {
+.infoHeader,
+.errorHeader,
+.statsHeader,
+.loadingHeader {
+  background: darkorchid;
+  color: #f1f1f1;
+}
+
+.loadingHeader {
+  text-align: center;
+}
+
+.statsHeader,
+.infoHeader,
+.errorHeader,
+.errorBox {
   display: none;
 }

@@ -12,31 +12,51 @@
       <div class="container"><h1>🙌 Welcome to 🐦 TVD 📜 Stats</h1></div>
     </header>
 
-    <div class="container">
-      <div class="statsContainer">
-        <div class="info">
-          <h2>ℹ Information</h2>
-          <div class="box"><p>⏰ The time is: 2019-01-05T20:29:18.399Z</p></div>
-          <div class="box"><p>💻 Server timestamp: Jan 5, 2019 8:29 PM</p></div>
-          <div class="box">
-            <p>
-              🥗 Serving stats from: Jan 4, 2019 12:00 AM to Jan 4, 2019 11:59
-              PM
-            </p>
-          </div>
-        </div>
-
-        <div class="stats"><h2>🔥 Here are your 📜 Stats:</h2></div>
-      </div>
-
-      <div class="loading"><h2>🤞🏻🤞🏻🤞🏻 Loading your Stats!!! 🤞🏻🤞🏻🤞🏻</h2></div>
-
-      <div class="error">
-        <h2>An error occurred</h2>
-        <p>Error Text Here</p>
-      </div>
-
-      <p>Thank you for using TVD Stats. Goodbye! 👋</p>
+    <div class="infoHeader">
+      <div class="container"><h2>ℹ Information</h2></div>
     </div>
+
+    <div class="infoBox">
+      <div class="container">
+        <!-- <div class="box"><p>⏰ The time is: 2019-01-05T20:29:18.399Z</p></div>
+        <div class="box"><p>💻 Server timestamp: Jan 5, 2019 8:29 PM</p></div>
+        <div class="box">
+          <p>
+            🥗 Serving stats from: Jan 4, 2019 12:00 AM to Jan 4, 2019 11:59 PM
+          </p>
+        </div> -->
+        <div id="dateTime"></div>
+      </div>
+    </div>
+
+    <div class="errorHeader">
+      <div class="container"><h2>🔴 An Error Occurred!</h2></div>
+    </div>
+
+    <div class="errorBox">
+      <div class="container"><div id="errorText"></div></div>
+    </div>
+
+    <div class="statsHeader">
+      <div class="container"><h2>🔥 Here are your 📜 Stats:</h2></div>
+    </div>
+
+    <div class="statsBox">
+      <div class="container">
+        <div id="resolveData"></div>
+        <div id="downloadData"></div>
+      </div>
+    </div>
+
+    <div class="loadingHeader">
+      <div class="container"><h2>🤞🏻🤞🏻🤞🏻 Loading your Stats!!! 🤞🏻🤞🏻🤞🏻</h2></div>
+    </div>
+
+    <div class="goodbye">
+      <div class="container">
+        <p>Thank you for using TVD Stats. Goodbye! 👋</p>
+      </div>
+    </div>
+    <script src="../main.js"></script>
   </body>
 </html>

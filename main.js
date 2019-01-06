@@ -19,17 +19,17 @@ const responseDiv = document.getElementById("resolveData");
 const downloadDiv = document.getElementById("downloadData");
 const dateTime = document.getElementById("dateTime");
 
-let p = createNode("p");
-
-p.innerHTML = `⏰ The time is: ${new Date().toISOString()}`;
-
-append(dateTime, p);
-
 fetch(myRequest, myInit)
   .then(response => response.json())
   .then(data => {
     responseData = data;
     console.log(data);
+
+    let p3 = createNode("p");
+
+    p3.innerHTML = `⏰ The time is: ${new Date().toISOString()}`;
+
+    append(dateTime, p3);
 
     let p = createNode("p");
     p.innerHTML = `💻 Server timestamp: ${responseData.timestamp}`;
@@ -84,6 +84,10 @@ fetch(myRequest, myInit)
     );
     append(ul, li4);
 
+    let p4 = createNode("p");
+    p4.innerHTML = `/resolve endpoint`;
+    append(responseDiv, p4);
+
     append(responseDiv, ul);
 
     let ul2 = createNode("ul");
@@ -131,12 +135,36 @@ fetch(myRequest, myInit)
     );
     append(ul2, li8);
 
+    let p5 = createNode("p");
+    p5.innerHTML = `/download endpoint`;
+    append(downloadDiv, p5);
+
     append(downloadDiv, ul2);
 
-    let loading = document.getElementById("loading");
-    loading.parentNode.removeChild(loading);
+    // removing the loading div from the dom
+
+    let loading = document.getElementsByClassName("loadingHeader");
+    loading[0].parentNode.removeChild(loading[0]);
+
+    // displaying the stats header
+
+    let statsHeader = document.getElementsByClassName("statsHeader")[0];
+    statsHeader.style.display = "block";
+
+    // displaying the information header
+
+    let infoHeader = document.getElementsByClassName("infoHeader")[0];
+    infoHeader.style.display = "block";
   })
   .catch(error => {
     console.log(error);
     console.log(`An error occurred: ${error}`);
+    document.getElementsByClassName("loadingHeader")[0].style.display = "none";
+    document.getElementsByClassName("errorHeader")[0].style.display = "block";
+    // let errorBox = document.getElementsByClassName("errorBox")[0];
+    let errorText = document.getElementById("errorText");
+    let ep = createNode("p");
+    ep.innerHTML = `An error occurred ${error}`;
+    append(errorText, ep);
+    document.getElementsByClassName("errorBox")[0].style.display = "block";
   });
