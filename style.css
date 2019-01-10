@@ -5,7 +5,7 @@ body {
 }
 
 #main-header {
-  background: purple;
+  background: #00acc1;
   color: #f1f1f1;
   text-align: center;
 }
@@ -22,7 +22,7 @@ h2 {
 }
 
 .goodbye {
-  background: purple;
+  background: #00acc1;
   color: #f1f1f1;
   text-align: center;
 }
@@ -31,7 +31,7 @@ h2 {
 .errorHeader,
 .statsHeader,
 .loadingHeader {
-  background: darkorchid;
+  background: #26c6da;
   color: #f1f1f1;
 }
 
@@ -45,3 +45,5 @@ h2 {
 .errorBox {
   display: none;
 }
+
+/* colour paletts from: http://culrs.com/ */
