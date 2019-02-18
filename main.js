@@ -19,10 +19,13 @@ const responseDiv = document.getElementById("resolveData");
 const downloadDiv = document.getElementById("downloadData");
 const dateTime = document.getElementById("dateTime");
 
+console.log(`DOM ready. Sending fetch request.`);
+
 fetch(myRequest, myInit)
   .then(response => response.json())
   .then(data => {
     responseData = data;
+    console.log(`Here's your data: `);
     console.log(data);
 
     let p3 = createNode("p");
